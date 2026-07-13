@@ -1,25 +1,26 @@
-'''
+"""
 7.	Sa se scrie o functie care primeste ca parametri un numar x default egal cu 1, un numar variabil de siruri de caractere
 si un flag boolean setat default pe True. Pentru fiecare sir de caractere, sa se genereze o lista care sa contina caracterele
 care au codul ASCII divizibil cu x in caz ca flag-ul este setat pe True, in caz contrar sa contina caracterele care au codul
 ASCII nedivizibil cu x.
 Exemplu: x=2, "test", "hello", "lab002", flag=False va returna (["e", "s"], ["e", "o"], ["a"]).
 Atentie: functia trebuie sa returneze un numar variabil de liste care sa corespunda cu numarul de siruri de caractere primite ca input.
-'''
+"""
+
 
 def get_ascii_when_divisible_by_x(*strings, flag = True, x = 1):
     result = []
     for text in strings:
         current_result =[]
         for character in text:
-            if ord(character) % x == 0 and flag:
+            if not ord(character) % x and flag:
                 current_result.append(character)
-            elif ord(character) % x != 0 and not flag:
+            elif ord(character) % x and not flag:
                 current_result.append(character)
         result.append(current_result)
     return tuple(result)
 
-print (get_ascii_when_divisible_by_x("test", "hello", "lab002", flag = False, x = 2))
+print(get_ascii_when_divisible_by_x("test", "hello", "lab002", flag = False, x = 2))
 
 
 
