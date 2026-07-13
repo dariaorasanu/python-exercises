@@ -1,7 +1,9 @@
-''''
+"""
 4.	Sa se scrie o functie care primeste ca parametri doua liste a si b si returneaza: a intersectat cu b, a reunit cu b, a - b, b – a fara a folosi set-uri.
-'''
-def operations_on_sets (a, b):
+"""
+
+
+def operations_on_sets(a, b):
     # a intersectat cu b
     intersection = []
     i = 0
