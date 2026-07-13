@@ -1,7 +1,8 @@
-'''
+"""
 8. Given a string that represents a polynomial (Ex: "3x ^ 3 + 5x ^ 2 - 2x - 5")
 and a number (int or float). Evaluate the polynomial for the given value.
-'''
+"""
+
 
 def polynomial_calculator(polynom, value):
     result = 0
@@ -33,4 +34,5 @@ def polynomial_calculator(polynom, value):
                     result += float(parts[0]) * (value ** int(parts[1][1:]))
     return result
 
-print (polynomial_calculator("3x ^ 3 + 5x ^ 2 - 2x - 5.5", 1))
+print(polynomial_calculator("3x ^ 3 + 5x ^ 2 - 2x - 5.5", 1))
+
