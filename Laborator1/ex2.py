@@ -1,17 +1,19 @@
-'''
+"""
 2. Write a function that calculates how many vowels are in a string.
-'''
+"""
 
-def is_vowel (letter):
+def is_vowel(letter):
     letter = letter.lower()
-    if letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u':
+    if letter in 'aeiou':
         return True
     return False
-def vowels_count (string):
+
+
+def vowels_count(text):
     vowels = 0
-    for i in range(0, len(string)):
-        if is_vowel(string[i]):
+    for letter in text:
+        if is_vowel(letter):
             vowels = vowels + 1
     return vowels
 
-print (vowels_count('DAria'))
+print(vowels_count('DAria'))
