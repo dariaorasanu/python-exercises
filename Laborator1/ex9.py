@@ -1,10 +1,11 @@
-'''
+"""
 9. Write a function that returns the largest prime number from a string given as a parameter or -1
 if the character string contains no prime number.
  Ex: input: 'ahsfaisd35biaishai23isisvdshcbsi271cidsbfsd97sidsda'; output: 271
-'''
+"""
 
-def is_prime (number):
+
+def is_prime(number):
     if number == 0 or number == 1:
         return False
     if number % 2 == 0:
@@ -14,7 +15,8 @@ def is_prime (number):
             return False
     return True
 
-def largest_prime_number (text):
+
+def largest_prime_number(text):
     prime_number = -1
     for i in range(0, len(text)):
         if '0' <= text[i] <= '9':
@@ -28,5 +30,5 @@ def largest_prime_number (text):
                 prime_number = number
     return prime_number
 
-print (largest_prime_number('ahsfaisd35biaishai23isisvdshcbsi271cidsbfsd97sidsda'))
+print(largest_prime_number('ahsfaisd35biaishai23isisvdshcbsi271cidsbfsd97sidsda'))
 
