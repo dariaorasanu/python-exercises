@@ -12,3 +12,4 @@ def contains_special_characters(text):
 
 
 print(contains_special_characters('am\trezolvat\nexercitiile'))
+

@@ -15,3 +15,4 @@ def occurrences_count(small_string, main_string):
 print(occurrences_count('ana', 'ioana'))
 
 print(occurrences_count('aa', 'aaaa'))
+
