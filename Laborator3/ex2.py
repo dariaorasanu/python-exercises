@@ -13,4 +13,4 @@ def characters_frequency_in_string(text):
             result[character] = 1
     return result
 
-print (characters_frequency_in_string("Ana are mere"))
+print(characters_frequency_in_string("Ana are mere"))

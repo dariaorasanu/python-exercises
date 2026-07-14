@@ -45,7 +45,7 @@ def compare_dictionaries(dict1, dict2):
     result = (common_keys_with_different_values, list(dict1_set - dict2_set), list(dict2_set - dict1_set))
     return result
 
-print (compare_dictionaries({'a' : 2, 'b' : 5, 'c' : 1}, {'a' : 2, 'd' : 5, 'c' : 2}))
+print(compare_dictionaries({'a' : 2, 'b' : 5, 'c' : 1}, {'a' : 2, 'd' : 5, 'c' : 2}))
 
 #liste
 d1 = {"student": "Daria", "note": [10, 8, 9]}

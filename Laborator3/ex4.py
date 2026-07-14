@@ -15,6 +15,6 @@ def build_xml_element(tag, content, **dictionary):
     result = f'{result}>{content}</{tag}>'
     return result
 
-print (build_xml_element("a", "Hello there", href="http://python.org", _class="my-link", id="someid"))
+print(build_xml_element("a", "Hello there", href="http://python.org", _class="my-link", id="someid"))
 
 

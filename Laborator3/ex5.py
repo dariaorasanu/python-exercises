@@ -42,4 +42,4 @@ def validate_dict(rules, dictionary):
             return False
     return True
 
-print (validate_dict([("key1", "", "inside", ""), ("key2", "start", "middle", "winter")], {"key2": "starting the engine in the middle of the winter", "key1": "come inside, it's too cold outside"}))
+print(validate_dict([("key1", "", "inside", ""), ("key2", "start", "middle", "winter")], {"key2": "starting the engine in the middle of the winter", "key1": "come inside, it's too cold outside"}))
