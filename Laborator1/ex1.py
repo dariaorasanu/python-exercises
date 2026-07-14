@@ -19,7 +19,7 @@ def largest_common_divisor(*numbers):
 
     return largest_divisor
 
-print(largest_common_divisor(24,16,44,4,8))
+print(largest_common_divisor(24, 16, 44, 4, 8))
 
 
 
