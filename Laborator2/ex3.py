@@ -25,7 +25,7 @@ def cmmdc(number1, number2):
 
 
 def refactorize(a, b, c):
-    divide_number = cmmdc(abs(a),cmmdc(abs(b),abs(c)))
+    divide_number = cmmdc(abs(a), cmmdc(abs(b), abs(c)))
     a //= divide_number
     b //= divide_number
     c //= divide_number

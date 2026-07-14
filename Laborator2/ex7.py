@@ -20,7 +20,7 @@ def get_ascii_when_divisible_by_x(*strings, flag = True, x = 1):
         result.append(current_result)
     return tuple(result)
 
-print(get_ascii_when_divisible_by_x("test", "hello", "lab002", flag = False, x = 2))
+print(get_ascii_when_divisible_by_x("test", "hello", "lab002", flag=False, x=2))
 
 
 
