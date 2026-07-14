@@ -7,11 +7,11 @@ def convert_style(camel_case_string):
     for i in range(1, len(camel_case_string)):
         if camel_case_string[i].isupper():
             #concatenare cu format string
-            snake_case_string += f'_{camel_case_string[i].lower()}'
+            snake_case_string = f'{snake_case_string}_{camel_case_string[i].lower()}'
         else:
-            snake_case_string += camel_case_string[i]
+            snake_case_string = f'{snake_case_string}{camel_case_string[i]}'
 
     return snake_case_string
 
-print(convert_style('UpperCamelCase'))
+print(convert_style('SnakeCase'))
 
