@@ -18,7 +18,7 @@ def is_prime(number):
 
 def largest_prime_number(text):
     prime_number = -1
-    for i in range(0, len(text)):
+    for i in range(len(text)):
         if '0' <= text[i] <= '9':
             number = int(text[i])
             i = i + 1

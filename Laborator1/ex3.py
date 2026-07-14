@@ -19,7 +19,7 @@ def is_separator(letter):
 
 def words_count(text):
     words = 0
-    for i in range(0, len(text)):
+    for i in range(len(text)):
         if i == 0 and is_letter(text[i]):
             words = words + 1
         if is_letter(text[i]) and is_separator(text[i - 1]):

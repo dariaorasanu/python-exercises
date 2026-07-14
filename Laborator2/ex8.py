@@ -13,7 +13,7 @@ def zip_implementation(*lists):
         if len (l) > max_length:
             max_length = len(l)
     result = []
-    for i in range (0, max_length):
+    for i in range (max_length):
         current_result = []
         for l in lists:
             if i >= len(l):
