@@ -1,6 +1,6 @@
 """
 3. Scrieti o functie care returneaza numarul de cuvinte care exista intr-un string. Cuvintele sunt separate de spatii, si/sau semne de punctuatie (, ;, ? ! . )
-Intre 2 cuvinte pot aparea in orice combinatie spatii si smne de punctuatie
+Intre 2 cuvinte pot aparea in orice combinatie spatii si semne de punctuatie
 """
 
 
@@ -30,3 +30,15 @@ def words_count(text):
 print(words_count(' ; aici,am!   patru  .  ;  cuvinte?'))
 #fara cuvinte:
 print(words_count('  ;? '))
+
+
+def words_count_with_zip(text):
+    words = 0
+    if is_letter(text[0]):
+        words = words + 1
+    for precedent, current in zip(text[:-1], text[1:]):
+        if is_separator(precedent) and is_letter(current):
+            words += 1
+    return words
+
+print(words_count_with_zip(' ; aici,am!   patru  .  ;  cuvinte?'))
