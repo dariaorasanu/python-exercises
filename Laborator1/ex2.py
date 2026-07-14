@@ -2,6 +2,7 @@
 2. Write a function that calculates how many vowels are in a string.
 """
 
+
 def is_vowel(letter):
     letter = letter.lower()
     if letter in 'aeiou':
