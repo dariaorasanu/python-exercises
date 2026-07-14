@@ -22,5 +22,5 @@ def extract_unique_and_duplicates_from_list(l):
             duplicates += 1
     return (uniques, duplicates)
 
-print (extract_unique_and_duplicates_from_list([1, 2, 2, 3, 3, 3, 4]))
+print(extract_unique_and_duplicates_from_list([1, 2, 2, 3, 3, 3, 4]))
 
