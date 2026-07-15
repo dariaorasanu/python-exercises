@@ -14,10 +14,8 @@ Ex: {1,2}, {2, 3} =>
 
 def operations_on_sets(*sets):
     my_dict = dict()
-    for i in range(len(sets)):
-        for j in range(i + 1, len(sets)):
-            set1 = sets[i]
-            set2 = sets[j]
+    for i, set1 in enumerate(sets):
+        for j, set2 in enumerate(sets[i + 1:], start=i + 1):
             my_dict[f'{set1} | {set2}'] = len(set1 | set2)
             my_dict[f'{set1} & {set2}'] = len(set1 & set2)
             my_dict[f'{set1} - {set2}'] = len(set1 - set2)
