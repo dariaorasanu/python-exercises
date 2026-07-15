@@ -5,6 +5,29 @@ si sa se returneze un tuplu de liste de diferente astfel: (cheile_comune_dar_cu_
 """
 
 
+def compare_sets_v1(set1, set2):
+    if len(set1) != len(set2):
+        return False
+
+    for item1 in set1:
+        ok = False
+        for item2 in set2:
+            if are_equal(item1, item2):
+                ok = True
+                break
+        if not ok:
+            return False
+    return True
+
+
+def compare_sets_v2(set1, set2):
+    diff1 = set1 - set2
+    diff2 = set2 - set1
+    if not diff1.isdisjoint(diff1) or not diff2.isdisjoint(diff2):
+        return False
+    return True
+
+
 def are_equal(element1, element2):
     if type(element1) != type(element2):
         return False
@@ -12,23 +35,25 @@ def are_equal(element1, element2):
     elif type(element1) == type(element2) and type(element1) in (int, float, str, bool):
         return element1 == element2
 
-    elif type(element1) == list:
+    elif type(element1) is list:
         if len(element1) != len(element2):
             return False
-        for i in range(len(element1)):
-            if not are_equal(element1[i], element2[i]):
+        pairs = zip(element1, element2)
+        for pair in pairs:
+            if not are_equal(pair[0],pair[1]):
                 return False
 
-    elif type(element1) == dict:
-        if set(element1.keys()) != set(element2.keys()):
+    elif type(element1) is dict:
+        if len(element1) != len(element2):
             return False
         for key in element1:
+            if key not in element2:
+                return False
             if not are_equal(element1[key], element2[key]):
                 return False
 
-    elif type(element1) == set and type(element2) == set:
-        if element1 - element2 != set() and element2 - element1 != set():
-            return False
+    elif type(element1) is set:
+        return compare_sets_v1(element1, element2)
 
     return True
 
@@ -44,6 +69,7 @@ def compare_dictionaries(dict1, dict2):
             common_keys_with_different_values.append(key)
     result = (common_keys_with_different_values, list(dict1_set - dict2_set), list(dict2_set - dict1_set))
     return result
+
 
 print(compare_dictionaries({'a' : 2, 'b' : 5, 'c' : 1}, {'a' : 2, 'd' : 5, 'c' : 2}))
 
@@ -72,3 +98,4 @@ d3 = {"culori": {"rosu", "albastru"}}
 d4 = {"culori": {"albastru", "rosu"}}
 
 print(compare_dictionaries(d3, d4))
+
