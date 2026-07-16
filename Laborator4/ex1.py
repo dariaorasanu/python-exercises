@@ -21,3 +21,5 @@ except ValueError:
     print("Trebuie introduse doua numere.")
 except ZeroDivisionError:
     print("Impartirea la zero nu este permisa.")
+except Exception as e:
+    print(f"A aparut eroarea: {str(e)}")
