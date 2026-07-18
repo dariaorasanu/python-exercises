@@ -10,7 +10,7 @@ import os
 def search_by_content(target, to_search):
     result = []
     if os.path.isfile(target):
-        with open (target, 'rt') as f:
+        with open(target, 'rt') as f:
             for line in f:
                 if to_search in line:
                     result.append(target)
@@ -19,7 +19,7 @@ def search_by_content(target, to_search):
         for root, dirs, files in os.walk(target):
             for f in files:
                 full_file_path = os.path.join(root, f)
-                with open (full_file_path, 'rt', encoding="utf-8", errors='ignore') as file:
+                with open(full_file_path, 'rt', encoding="utf-8", errors='ignore') as file:
                     for line in file:
                         if to_search in line:
                             result.append(full_file_path)
