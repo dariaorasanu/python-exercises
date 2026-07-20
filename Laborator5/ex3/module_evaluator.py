@@ -7,7 +7,8 @@ Input Example:
 """
 
 
-def evaluate(input_file):
+#var1:
+def evaluate1(input_file):
     try:
         with open(input_file, 'r') as f:
             for line in f:
@@ -31,6 +32,25 @@ def evaluate(input_file):
 
     except OSError as e:
         print(f"Eroare la citirea din fisier: {str(e)}")
+    except Exception as e:
+        print(f"A aparut o alta eroare: {str(e)}")
+
+
+#var2: cu exec
+def evaluate2(input_file):
+    try:
+        with open(input_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    a, b, c = line.split()
+                    instruction = f'print("{a} {c} {b} =", {a} {c} {b})'
+                    exec(instruction)
+
+    except OSError as e:
+        print(f"Eroare la citirea din fisier: {str(e)}")
+    except ArithmeticError:
+        print("Impartirea la zero nu este permisa!")
     except Exception as e:
         print(f"A aparut o alta eroare: {str(e)}")
 

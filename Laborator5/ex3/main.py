@@ -1,4 +1,4 @@
-from module_evaluator import evaluate
+from module_evaluator import evaluate2
 
 if __name__ == '__main__':
-    evaluate('input.txt')
+    evaluate2('input.txt')
